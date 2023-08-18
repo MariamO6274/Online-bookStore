@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">AudioBooks</a></li>
+        <li><a href="./events.html">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>About us</h1>
+      <img src="./book img.jpeg" alt="Book photo" />
+    </div>
+    <div class="content">
+      <h2>About shop</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+        reprehenderit fugiat sunt odit magnam nam, delectus eius culpa vitae
+        minus dolores. Est nihil quo dolorem voluptate adipisci rem non
+        reprehenderit.
+      </p>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .hero {
+        height: 500px;
+        position: relative;
+        width: 100%;
+      }
+      .hero img {
+        width: 100%;
+        
+      }
+      h1 {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 0 2px 20px #000;
+        font-size: 70px;
+      }
+      .content {
+        background: #fff;
+        color: #fff;
+        height: 450px;
+        padding-left: 130px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .content h2 {
+        font-size: 55px;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+      .content p {
+        padding: 0 180px;
+        line-height: 2;
+        color: green
+      }
+      .content::before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 125px;
+        top: -50px;
+        left: 0;
+        background: white;
+        transform: skew(8deg);
+      }
+      .content::after {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 125px;
+        top: -50px;
+        right: 0;
+        background: red;
+        transform: skew(-10deg);
+      }
+    </style>
+  </body>
+</html>
