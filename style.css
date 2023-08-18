@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Outfit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;600&family=Montserrat:wght@300;400;600&family=Outfit:wght@300&display=swap");
 
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   padding: 0 20px;
-    /* background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%); */
-
+  /* background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%); */
 }
 
 header {
@@ -63,53 +63,47 @@ blockquote {
   font-size: 16px;
   line-height: 26px;
   color: #83869a;
+  font-family: merienda;
+  font-style: italic;
 }
 figcaption {
   font-weight: bold;
   color: #05204a;
+  padding-left: 40px;
 }
-/* .main {
-  height: 200px;
-  background-color: #05204a;
-} */
-/* .blue {
-    
-    position: relative;
-    width: 100%;
-    height: 450px;
-    padding-top: 130px;
-    background: red;
+
+.books {
     text-align: center;
-
+    font-size: 48px;
+    margin-bottom: 20px;
 }
-.blue::before {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 125px;
-    top:-50px;
-    left: 0;
-    background: red;
-    transform: skew(8deg);
-
+#cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.blue::after {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 125px;
-    top:-50px;
-    right: 0;
-    background: red;
-    transform: skew(-8deg);
-
-} */
-
+.each-card {
+    width: 23%;
+    box-shadow: 0 0 4px 3px red;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.photoes {
+    width: 80%;
+}
+.title {
+    font-size: 20px;
+}
+.category, .price {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 10px;
+    font-size: 15px;
+}
 footer {
-  background-color: #05204a;  
+  background-color: #05204a;
   margin-top: 80px;
   height: 120px;
-  
 }
 .footer-text {
   color: #83869a;
