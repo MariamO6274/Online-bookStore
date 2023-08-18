@@ -4,32 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../Pages/about.html">About</a></li>
+        <li><a href="../Pages/events.html">Events</a></li>
         <li><a href="#">eBooks</a></li>
         <li><a href="#">AudioBooks</a></li>
-        <li><a href="../Pages/events.html">Events</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+   
+    <h1>Coming up Events</h1>
     <div class="container">
       <div class="traiangle"></div>
+      <!-- event starts -->
+      <div id="events">
+        <ul>
+          <li>
+            <div id="date">
+              <h2>18 <br /><span>August</span></h2>
+              <div class="details">
+                <h3>Where and when it will</h3>
+                <hr/>
+                <p>
+                  Bookshops are places of magical discoveries and the
+                  rediscovery of past pleasures. My bookshop, in fact any
+                  bookshop, makes me very happy. -Liane Moriarty
+                  <br />
+                  
+                  You see, bookshops are dreams built of wood and paper. They
+                  are time travel and escape and knowledge and power. They are,
+                  simply put, the best of places. ~Jen Campbell,
+                </p>
+                <button>View Details</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- event ends -->
     </div>
     <div class="white-container">
       <div class="section-traiangle"></div>
+      
     </div>
     <div class="container">
       <div class="traiangle"></div>
     </div>
-    <p>
-      Bookshops are places of magical discoveries and the rediscovery of past
-      pleasures. My bookshop, in fact any bookshop, makes me very happy. -Liane
-      Moriarty
-    </p>
+
     <p>
       You see, bookshops are dreams built of wood and paper. They are time
       travel and escape and knowledge and power. They are, simply put, the best
@@ -49,14 +75,20 @@
       for. Books have the ability to find their own way into our lives. ~Cecelia
       Ahern
     </p>
+    <footer>
+      <p class="footer-text">
+        Terms of Service <br />
+        &copy; 2023 Privacy Policy
+      </p>
+    </footer>
   </body>
 </html>
 
 <style>
-    body {
-        padding-inline: 20px;
-        padding-block: 20px;
-    }
+  body {
+    padding-inline: 20px;
+    padding-block: 20px;
+  }
   .container {
     background-color: #05204a;
     height: 300px;
@@ -74,7 +106,7 @@
   .white-container {
     background-color: white;
     height: 300px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -82,7 +114,37 @@
     height: 0;
     width: 0;
     border-top: 25px solid #05204a;
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+
+  #date h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    padding: 40px;
+    text-transform: uppercase;
+  }
+  .details {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+    color: white;
+  }
+  .details p {
+    color: #83869a;
+  }
+  button {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid #05204a;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #83869a;
+    margin-top: 15px;
+    cursor: pointer;
   }
 </style>
