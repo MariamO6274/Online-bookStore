@@ -84,7 +84,7 @@ figcaption {
 }
 .each-card {
     width: 23%;
-    box-shadow: 0 0 4px 3px red;
+    box-shadow: 0 0 4px 3px #05204a;
     padding: 20px;
     margin-bottom: 30px;
 }
@@ -94,7 +94,7 @@ figcaption {
 .title {
     font-size: 20px;
 }
-.category, .price {
+.genres, .price {
     font-weight: bold;
     text-transform: capitalize;
     margin: 10px;
