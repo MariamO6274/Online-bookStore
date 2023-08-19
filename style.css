@@ -74,8 +74,10 @@ figcaption {
 
 .books {
     text-align: center;
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-weight: 600;
+  font-size: 40px;
+  color: #05204a;
+  padding-bottom: 20px;
     
 }
 #cards {
@@ -89,9 +91,9 @@ figcaption {
   transform: scale(1.1);
 }
 .each-card {
-    width: 20%;
-    box-shadow: 0 0 4px 3px #05204a;
-    padding: 10px;
+    width: 15%;
+    /* box-shadow: 0 0 4px 3px #05204a; */
+    /* padding: 10px; */
     margin-bottom: 40px;
 }
 .photoes {
@@ -99,14 +101,15 @@ figcaption {
     justify-content: center;
 }
 .title {
-    font-size: 18px;
+    font-size: 15px;
     line-height: normal;
 }
 .genres, .author{
     font-weight: bold;
     text-transform: capitalize;
-    margin: 10px;
+    
     font-size: 12px;
+    color: #83869a;
 }
 .price {
     font-weight: bold;
@@ -124,7 +127,7 @@ figcaption {
     border-radius: 5px;
     font-size: 15px;
     color: white;
-    margin-top: 15px;
+    margin-top: 10px;
     cursor: pointer;
   }
 
