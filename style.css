@@ -76,30 +76,59 @@ figcaption {
     text-align: center;
     font-size: 48px;
     margin-bottom: 20px;
+    
 }
 #cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    
+
+}
+.each-card:hover {
+  transform: scale(1.1);
 }
 .each-card {
-    width: 23%;
+    width: 20%;
     box-shadow: 0 0 4px 3px #05204a;
-    padding: 20px;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin-bottom: 40px;
 }
 .photoes {
-    width: 80%;
+    width: 70%;
+    justify-content: center;
 }
 .title {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: normal;
 }
-.genres, .price {
+.genres, .author{
     font-weight: bold;
     text-transform: capitalize;
     margin: 10px;
-    font-size: 15px;
+    font-size: 12px;
 }
+.price {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 8px;
+    padding-top: 10px;
+    font-size: 15px;
+} 
+ .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #05204a;
+    background-color: #05204a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+
 footer {
   background-color: #05204a;
   margin-top: 80px;

@@ -1,0 +1,101 @@
+<!-- <div onclick="window.location.href='events.html';"></div> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/about.html">About</a></li>
+        <li><a href="../Pages/events.html">Events</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">AudioBooks</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="single-product">
+      <div class="book-cover-img">
+        <img
+          src="https://media.istockphoto.com/id/647809752/photo/old-books-with-vintage-bindings-and-beautiful-gilded-leather-book-covers.jpg?s=612x612&w=0&k=20&c=qAhVsNoHq3Lt1rlNJJmbK24OkTfSq2xx-zI7cBMR1zo="
+        />
+      </div>
+      <div class="book-details">
+        <h2>The Hobbit and The Lord of the Rings</h2>
+        <h4>Author: J.R.R. Tolkien</h4>
+        <h3>Fantasy, Fiction, Classics</h3>
+        <p>
+          <strong>Description:</strong> This four-volume, boxed set contains
+          J.R.R. Tolkien's epic masterworks The Hobbit and the three volumes of
+          The Lord of the Rings (The Fellowship of the Ring, The Two Towers, and
+          The Return of the King).
+        </p>
+        <h3>Price: $25.00</h3>
+        <button>Add To Cart</button
+        ><button class="instent-purchas">Instent Purchas</button>
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer-text">
+        Terms of Service <br />
+        &copy; 2023 Privacy Policy
+      </p>
+    </footer>
+
+    <style>
+      nav {
+        padding-top: 20px;
+      }
+
+      .single-product {
+        display: flex;
+      }
+      .book-details {
+        align-items: center;
+      }
+      h2 {
+        font-size: 25px;
+        font-weight: bold;
+        padding-top: 50px;
+        color: #05204a;
+        text-transform: capitalize;
+      }
+      h3,
+      p {
+        color: #05204a;
+      }
+      h4 {
+        color: #83869a;
+        font-style: italic;
+        font-family: merienda;
+      }
+      button {
+        display: inline-block;
+        padding: 10px 30px;
+        border: 2px solid;
+        border-radius: 5px;
+        font-size: 18px;
+        color: white;
+        background-color: #05204a;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+      .instent-purchas {
+        background-color: white;
+        border: 2px solid #05204a;
+        color: #05204a;
+        padding: 8px 22px;
+      }
+      .instent-purchas:hover {
+        color: #83869a;
+        background-color: #05204a;
+      }
+    </style>
+  </body>
+</html>
