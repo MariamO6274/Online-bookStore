@@ -71,13 +71,39 @@ figcaption {
   color: #05204a;
   padding-left: 40px;
 }
+form{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+ margin-bottom: 30px;
+}
+
+#filterInput {
+  width: 45%;
+  height: 20px;
+  border-radius: 30px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+/*  X .clear {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  right: 20px;
+  background-color: red;
+
+} */
 
 .books {
     text-align: center;
     font-weight: 600;
   font-size: 40px;
   color: #05204a;
-  padding-bottom: 20px;
+  padding-block: 20px;
     
 }
 #cards {
