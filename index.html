@@ -45,7 +45,41 @@
         <!-- casaSleli gilaki <span class="clear" onclick="document.getElementById('filterInput').value = ''"></span> -->
       </form>
     </section>
-    
+
+    <!-- categories and other search bar starts here -->
+
+    <div class="searchContainer">
+      <div class="search-bar">
+        <div id="select" class="selectClass">
+          <p id="selectText">All categories</p>
+          <img src="https://static.thenounproject.com/png/3456470-200.png" alt="looking down errow"/>
+          <ul id="dropDownList" class="dropList">
+            <li class="options">All Categories</li>
+            <li class="options">Academic</li> 
+            <li class="options">Dystopia</li> 
+            <li class="options">Fiction</li> 
+            <li class="options">Fantasy</li> 
+            <li class="options">Historical</li> 
+            <li class="options">Literature</li>
+            <li class="options">Novels</li>
+            <li class="options">Classics</li> 
+            <li class="options">Politics</li> 
+            <li class="options">Childrens</li> 
+            <li class="options">Romance</li>
+            <li class="options">Science Fiction</li>
+            <li class="options">School</li>
+            <li class="options">Young Adult</li>
+            <li class="options">Vampires</li>
+          </ul>
+        </div>
+        <input type="text" id="inputField" placeholder="Search In All Categories..."/>
+      </div>
+    </div>
+ 
+
+    <!-- categories and other search bar ends here -->
+
+
       <div id="cards" class="products">
         <div class="each-card" id="bookList">
           <img
@@ -70,5 +104,6 @@
       </p>
     </footer>
     <script src="./app.js"></script>
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>

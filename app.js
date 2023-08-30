@@ -1,6 +1,13 @@
-let grid = document.querySelector(".products");
 const bookList = document.getElementById("cards");
-let filterInput = document.getElementById("filterInput");
+
+fetch("https://example-data.draftbit.com/books?_limit=10").then((data) => {
+  data.json().then((result) => {
+    console.log("#Result#: ");
+    getUniqueGenreList(result).then((result2) => {
+      console.log("#result2#: ", result2);
+    });
+  });
+});
 
 function fetchFunction() {
   return fetch("https://example-data.draftbit.com/books?_limit=10")
@@ -16,13 +23,33 @@ function displayBooks(books) {
   books.map((book) => {
     const allBook = document.createElement("div");
     allBook.innerHTML = `
-           <img class="displayphotoes" src=${book.image_url} alt="img" />
+          <img class="displayphotoes" src=${book.image_url} alt="img" />
           <h1 class="title">${book.title}</h1>
-           <p class="author">Author: ${book.authors} </p>
-               <button class="button" onclick="eachBookDetails(${book.id})">See Details</button>
+          <p class="author">Author: ${book.authors} </p>
+          <button class="button" onclick="eachBookDetails(${book.id})">See Details</button>
          
   `;
     bookList.appendChild(allBook);
+  });
+}
+
+function getUniqueGenreList(jsonArray) {
+  return new Promise((resolve, reject) => {
+    try {
+      const uniqueGenres = jsonArray
+        .map((item) => item.genre_list.split(","))
+        .flat()
+        .reduce((acc, genre) => {
+          if (!acc.includes(genre)) {
+            acc.push(genre);
+          }
+          return acc;
+        }, []);
+
+      resolve(uniqueGenres);
+    } catch (error) {
+      reject(error);
+    }
   });
 }
 
@@ -59,21 +86,26 @@ function eachBookDetails(bookId) {
     .catch((error) => error);
 }
 
+// FILTER/SEARCH BAR
+let grid = document.querySelector(".products");
+let filterInput = document.getElementById("filterInput");
+
+// get values from the api create dynamic element
+
 // add event listener
 filterInput.addEventListener("keyup", filterProducts);
 
-// callback function
+// addEventListener's callback function
 function filterProducts() {
   let filterValue = filterInput.value.toUpperCase();
-  console.log("filterValiu is ",filterValue)
+  console.log("filterValiu is ", filterValue);
   let item = grid.querySelectorAll(".cards");
-   console.log(filterValue);
-
+  console.log(filterValue);
 
   for (let i = 0; i < item.length; i++) {
     let span = item[i].querySelector(".title");
 
-    console.log("i am item: ", item)
+    console.log("i am item: ", item);
 
     if (span.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
       item[i].style.display = "initial";
@@ -87,6 +119,21 @@ fetchFunction()
   .then(displayBooks)
   .catch((error) => error);
 
+// Drop down Search bar
 
+let select = document.getElementById("select");
+let dropDownList = document.getElementById("dropDownList");
+let selectText = document.getElementById("selectText");
+let inputField = document.getElementById("inputField");
+let options = document.getElementsByClassName("options");
 
+select.onclick = function () {
+  dropDownList.classList.toggle("open");
+};
 
+for (option of options) {
+  option.onclick = function () {
+    selectText.innerHTML = this.innerHTML;
+    inputField.placeholder = "Search In " + selectText.innerHTML;
+  };
+}

@@ -28,9 +28,7 @@ function fetchBooks() {
       allBookss = books;
       initBookList(books);
     })
-    .catch((error) => {
-      console.error("Error fetching books: ", error);
-    });
+    .catch((error) => error);
 }
 
 function initBookList(books) {
@@ -50,7 +48,7 @@ function initBookList(books) {
   });
 }
 
-// gverdi rom sheicvalos, axali funqcia sheqmna da
+// gverdi rom sheicvalos, axali funqcia sheqmna da !!!!!!! use this one like useEffect
 function redirectToDetails(bookId) {
   window.location.href = `details.html?id=${bookId}`;
 }
