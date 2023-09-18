@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Book Store</title>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -16,6 +23,13 @@
           <li><a href="#">eBooks</a></li>
           <li><a href="#">AudioBooks</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="./ShoppingCart/shoppingCart.html">Cart</a></li>
+          <li>
+            <div class="cart-icon" id="cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count">0</span>
+            </div>
+          </li>
         </ul>
       </nav>
       <div class="hero">
@@ -31,54 +45,57 @@
       </div>
     </header>
 
-   
-
     <main>
-        <div class="books">Find Your Favorite Book</div>
-    <section>
-      <form>
-        <input
-          type="text"
-          id="filterInput"
-          placeholder="Places of magical discoveries..."
-        />
-        <!-- casaSleli gilaki <span class="clear" onclick="document.getElementById('filterInput').value = ''"></span> -->
-      </form>
-    </section>
+      <div class="books">Find Your Favorite Book</div>
+      <section>
+        <form>
+          <input
+            type="text"
+            id="filterInput"
+            placeholder="Places of magical discoveries..."
+          />
+          <!-- casaSleli gilaki <span class="clear" onclick="document.getElementById('filterInput').value = ''"></span> -->
+        </form>
+      </section>
 
-    <!-- categories and other search bar starts here -->
+      <!-- categories and other search bar starts here -->
 
-    <div class="searchContainer">
-      <div class="search-bar">
-        <div id="select" class="selectClass">
-          <p id="selectText">All categories</p>
-          <img src="https://static.thenounproject.com/png/3456470-200.png" alt="looking down errow"/>
-          <ul id="dropDownList" class="dropList">
-            <li class="options">All Categories</li>
-            <li class="options">Academic</li> 
-            <li class="options">Dystopia</li> 
-            <li class="options">Fiction</li> 
-            <li class="options">Fantasy</li> 
-            <li class="options">Historical</li> 
-            <li class="options">Literature</li>
-            <li class="options">Novels</li>
-            <li class="options">Classics</li> 
-            <li class="options">Politics</li> 
-            <li class="options">Childrens</li> 
-            <li class="options">Romance</li>
-            <li class="options">Science Fiction</li>
-            <li class="options">School</li>
-            <li class="options">Young Adult</li>
-            <li class="options">Vampires</li>
-          </ul>
+      <div class="searchContainer">
+        <div class="search-bar">
+          <div id="select" class="selectClass">
+            <p id="selectText">All categories</p>
+            <img
+              src="https://static.thenounproject.com/png/3456470-200.png"
+              alt="looking down errow"
+            />
+            <ul id="dropDownList" class="dropList">
+              <li class="options">All Categories</li>
+              <li class="options">Academic</li>
+              <li class="options">Dystopia</li>
+              <li class="options">Fiction</li>
+              <li class="options">Fantasy</li>
+              <li class="options">Historical</li>
+              <li class="options">Literature</li>
+              <li class="options">Novels</li>
+              <li class="options">Classics</li>
+              <li class="options">Politics</li>
+              <li class="options">Childrens</li>
+              <li class="options">Romance</li>
+              <li class="options">Science Fiction</li>
+              <li class="options">School</li>
+              <li class="options">Young Adult</li>
+              <li class="options">Vampires</li>
+            </ul>
+          </div>
+          <input
+            type="text"
+            id="inputField"
+            placeholder="Search In All Categories..."
+          />
         </div>
-        <input type="text" id="inputField" placeholder="Search In All Categories..."/>
       </div>
-    </div>
- 
 
-    <!-- categories and other search bar ends here -->
-
+      <!-- categories and other search bar ends here -->
 
       <div id="cards" class="products">
         <div class="each-card" id="bookList">
@@ -96,7 +113,7 @@
         </div>
       </div>
     </main>
-  
+
     <footer>
       <p class="footer-text">
         Terms of Service <br />
