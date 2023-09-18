@@ -1,5 +1,7 @@
 const bookList = document.getElementById("cards");
 
+
+// levanis
 fetch("https://example-data.draftbit.com/books?_limit=10").then((data) => {
   data.json().then((result) => {
     console.log("#Result#: ");
@@ -17,6 +19,7 @@ function fetchFunction() {
     .catch((error) => error);
 }
 
+// ak vcer lokacias
 // change it for map new version/ also can use -> for (const book of books)
 function displayBooks(books) {
   bookList.innerHTML = "";
@@ -26,13 +29,44 @@ function displayBooks(books) {
           <img class="displayphotoes" src=${book.image_url} alt="img" />
           <h1 class="title">${book.title}</h1>
           <p class="author">Author: ${book.authors} </p>
+          <a href="details.html?id=${book.id}" class="button">daachire ak</a>
           <button class="button" onclick="eachBookDetails(${book.id})">See Details</button>
+
+          <button onclick="redirectToDetails(${book.id})">aba ese scade</button>;
          
   `;
     bookList.appendChild(allBook);
   });
 }
 
+function redirectToDetails(bookId) {
+  window.location.href = `details.html?id=${bookId}`;
+}
+
+// test.js dan
+
+function showBookDetailsFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const bookId = urlParams.get("id");
+  const book = allBookss.find((b) => b.id === parseInt(bookId));
+
+  if (book) {
+    const bookDetails = document.getElementById("cards");
+    bookDetails.innerHTML = `
+        <h3>${book.title}</h3>
+        <p>${book.authors}</p>
+        <p>${book.description}</p>
+        <img src='${book.imageURL}' alt='${book.title}'/>
+        `;
+  } else {
+    document.getElementById("cards").innerHTML = `<p>Book is not found</p>`;
+  }
+}
+  // document.getElementById("streamDiv").addEventListener("click", function () {
+  //   window.location.href = "Stream/livestream.html";
+  // });
+
+//levanis
 function getUniqueGenreList(jsonArray) {
   return new Promise((resolve, reject) => {
     try {

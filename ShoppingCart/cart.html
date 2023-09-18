@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./shoppingCart.css" />
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./Pages/about.html">About</a></li>
+        <li><a href="../Pages/events.html">Events</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">AudioBooks</a></li>
+        <li><a href="../ShoppingCart/shoppingCart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <h1>Shopping Cart</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Tax</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+    </table>
+
+    <br />
+    <div class="checkout">
+      <div id="cart-total">Subtotal: $0.00</div>
+      <p>Tax: 0.25%</p>
+      <div id="cart-subtotal">Total: $0.00</div>
+    </div>
+
+    <script src="shoppingCart.js"></script>
+  </body>
+</html>
