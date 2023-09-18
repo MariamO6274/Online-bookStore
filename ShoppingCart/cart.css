@@ -1,0 +1,82 @@
+/* manu nav bar styling */
+header {
+  background-color: #f2f3f8;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+ul {
+  list-style-type: none;
+  color: #2f375b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li a {
+  color: #05204a;
+  text-decoration: none;
+  width: 100%;
+}
+
+nav ul li a:hover {
+  background-color: #05204a;
+  border: solid 1px #05204a;
+  border-radius: 0 25% 0 25%;
+  color: white;
+  padding: 5px 10px;
+}
+
+/*shopping cart table*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  padding: 20px;
+  color: white;
+  background-color: #05204a;
+}
+td {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* images*/
+.displayphotoes {
+  width: 60px;
+  height: 80px;
+  margin-right: 10px;
+}
+.bookItem {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+/*buttons*/
+.remove-item {
+  background-color: #05204a;
+  color: white;
+  border: 0;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+/*total*/
+.checkout{
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-right: 100px;
+  margin-top: 50px;
+   font-size: large;
+   line-height: 0.6;
+
+}
+#cart-subtotal{
+  border-top: 1px solid #eee;
+  font-size: large;
+  color: #05204a;
+  padding-top: 15px;
+  font-weight: bold;
+}
