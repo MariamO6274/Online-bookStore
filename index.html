@@ -11,19 +11,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- menu list, header includes menu bg plus hero section -->
     <header>
       <nav>
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./Pages/about.html">About</a></li>
           <li><a href="../Pages/events.html">Events</a></li>
-          <li><a href="#">eBooks</a></li>
-          <li><a href="#">AudioBooks</a></li>
+          <li><a href="./Category/category.html">Category</a></li>
+          <li><a href="#">Audio(e)Books</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="./ShoppingCart/shoppingCart.html">Cart</a></li>
+          <li><a href="./ShoppingCart/cart.html">Cart</a></li>
           <li>
             <div class="cart-icon" id="cart-icon">
               <i class="fa-solid fa-cart-shopping"></i>
@@ -32,6 +34,8 @@
           </li>
         </ul>
       </nav>
+
+      <!-- hero img and text -->
       <div class="hero">
         <div class="hero-text">
           <h1>Dreams built of wood and paper</h1>
@@ -45,6 +49,7 @@
       </div>
     </header>
 
+    <!-- search bar form -->
     <main>
       <div class="books">Find Your Favorite Book</div>
       <section>
@@ -97,6 +102,9 @@
 
       <!-- categories and other search bar ends here -->
 
+
+
+      <!-- each of book card, display dynamiccly check JS for this one -->
       <div id="cards" class="products">
         <div class="each-card" id="bookList">
           <img
@@ -109,11 +117,13 @@
           <p class="author">Author</p>
           <p class="genres">Genres</p>
           <p class="price">Price</p>
-          <a class="button" href="./Pages/details.html">Buy</a>
+          <a class="button" href="./Pages/details.html">See Details</a>
         </div>
       </div>
     </main>
 
+
+    <!-- footer goes from here -->
     <footer>
       <p class="footer-text">
         Terms of Service <br />
@@ -121,6 +131,6 @@
       </p>
     </footer>
     <script src="./app.js"></script>
-    <!-- <script src="./script.js"></script> -->
+ 
   </body>
 </html>
