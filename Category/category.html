@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./category.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./Pages/about.html">About</a></li>
+          <li><a href="../Pages/events.html">Events</a></li>
+          <li><a href="#">eBooks</a></li>
+          <li><a href="#">AudioBooks</a></li>
+          <li><a href="../ShoppingCart/shoppingCart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- akedan viwyeb  -->
+    
+      <h1>Book Store</h1>
+    <div class="genre-filter">
+      <label for="genre-select">Select Genre:</label>
+      <select id="genre-select">
+        <option value="Classics">Classics</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Historical">Historical</option>
+      </select>
+    </div>
+    
+    <!-- akedan vrchebit left  -->
+
+    <!-- axali search bar added here -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search by title..." />
+
+      <!-- drop down goes here-->
+      <select id="categorySelect">
+        <option value="">All Categories</option>
+      </select>
+      <button id="searchButton">Search</button>
+    </div>
+
+    <!-- esec axali bolo versia  for book cards to display-->
+    <main id="bookList" class="grid-container"></main>
+
+    <script src="./category.js"></script>
+  </body>
+</html>
