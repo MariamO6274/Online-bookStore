@@ -12,7 +12,6 @@ body {
   padding-left: 30px;
 }
 header {
-
   padding-top: 30px;
   padding-bottom: 40px;
 }
@@ -40,3 +39,25 @@ nav ul li a:hover {
 }
 
 /* book cards */
+#bookDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+img {
+  width: 200px;
+  height: 260px;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  background-color: #05204a;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}

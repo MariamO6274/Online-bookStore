@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p> <strong>Format:</strong> ${book.format}</p>
             <h3>Price: $${book.rating}</h3>
             <button>Add To Cart</button>
-            <button class="instent-purchas">Instent Purchas</button>
         `;
   } catch (error) {
     console.error("Error fetching book data:", error);
