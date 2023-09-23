@@ -89,38 +89,3 @@ searchInput.addEventListener("input", fetchBooks);
 
 // fetchBooks function to load initial data
 fetchBooks();
-
-// bolo verisa drapis
-const genreSelect = document.getElementById("genre-select");
-
-// Function to fetch data from the API and populate genres in the dropdown
-async function fetchData() {
-  try {
-    const response = await fetch(
-      "https://example-data.draftbit.com/books?_limit=10"
-    );
-    const data = await response.json();
-
-    // Extract and populate genres in the dropdown
-    const genres = [...new Set(data.map((book) => book.genre))];
-    genres.forEach((genre) => {
-      const option = document.createElement("option");
-      option.textContent = genre;
-      genreSelect.appendChild(option);
-    });
-
-    // Display all books initially
-    displayBooks(data);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
-
-// Event listener to filter books by selected genre
-genreSelect.addEventListener("change", filterByGenre);
-
-function filterByGenre() {
-  const selectedGenre = genreSelect.value;
-  const filteredBooks = cart.filter((book) => book.genre === selectedGenre);
-  displayBooks(filteredBooks);
-}
